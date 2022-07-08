@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ContainerForm = styled.div`
     display: flex;
     align-items: center;
-    width: 260px;
+    width: 300px;
     height: 50px;
     border-radius: 50px;
     background: #26292c;
@@ -16,6 +16,7 @@ export const InputForm = styled.input`
     border: transparent;
     color: #E0E0E0;
     font-family: 'Poppins', sans-serif;
+    width: 240px;
     font-size: 16px;
     padding-left: 20px;
     &:focus{
@@ -36,7 +37,7 @@ export const TitleForm = styled.div`
 
 export const Text = styled.div`
     font-family: 'Poppins', sans-serif;
-    font-size: 60px;
+    font-size: 48px;
     color: #E0E0E0;
 `;
 
@@ -53,27 +54,38 @@ export const Div = styled.div`
     flex-direction: column;
     height: 90vh;
     padding-bottom: 10vh;
-    background: linear-gradient(180deg, #33383D 0%, #1C1D20 100%);
-    align-items: center;
+    
+    align-items: flex-start;
     justify-content: space-evenly;
-    min-width: 50vw;
+    min-width: 300px;
+
     @media (max-width: 768px) {
-        min-width: 100vw;
+        margin-top: 10vh;
+        height: 85vh;
+        padding-bottom: 5vh;
     }
+    
     
 `;
 
 export const DivExtern = styled.div`
     display: flex;
+    flex-direction: column;
     min-width: 50vw;
     height: 100%;
+    align-items: center;
+    background: linear-gradient(180deg, #33383D 0%, #1C1D20 100%);
+
+    @media (max-width: 768px) {
+        width: 100vw;
+    }
 `;
 
 export const Submit = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 260px;
+    width: 300px;
     height: 50px;
     border-radius: 50px;
     background: linear-gradient(#FF2D04 0%, #C13216 100%);

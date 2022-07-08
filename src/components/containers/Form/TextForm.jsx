@@ -5,7 +5,7 @@ const TextForm = () => {
   return (
     <div>
         <Text>Olá,</Text>
-        <Text style={{ fontSize: '16px' }}>Para continuar navegando de forma<br/>segura, efetue o login na rede.</Text>
+        <Text style={{ fontSize: '14px' }}>Para continuar navegando de forma<br/>segura, efetue o login na rede.</Text>
     </div>
   );
 }
