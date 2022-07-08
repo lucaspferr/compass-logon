@@ -57,6 +57,10 @@ export const Div = styled.div`
     align-items: center;
     justify-content: space-evenly;
     min-width: 50vw;
+    @media (max-width: 768px) {
+        min-width: 100vw;
+    }
+    
 `;
 
 export const DivExtern = styled.div`
