@@ -1,7 +1,7 @@
 import React from "react";
 import Form from "../../components/Form/Form";
+import IconBackground from "../../components/ImagesAndIcons/IconBackground";
 import ImageBackground from "../../components/ImagesAndIcons/ImageBackground";
-import { CompassLogo } from "../../components/ImagesAndIcons/style";
 import { Container } from "./styles";
 
 const LogonPage = () => {
@@ -10,7 +10,7 @@ const LogonPage = () => {
         <Container>
             <Form/>
             <ImageBackground/>
-            <CompassLogo/>
+            <IconBackground/>
         </Container>
     );
 }

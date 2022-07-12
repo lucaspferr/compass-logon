@@ -6,10 +6,26 @@ import Input from '../Input/Input';
 import Button from '../Button/Button';
 
 const Form = () => {
+
+    const [form, setForm] = React.useState({username: '', password: ''});
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        console.log(form.username, form.password);
+        if(form.username === 'admin' && form.password === 'admin') {
+            console.log('Login realizado com sucesso');
+        }
+    }
+
+    function handleChange({target}) {
+        const {id, value} = target;
+        setForm({...form, [id]: value});
+    }
+
   return (
     <React.Fragment>
         <DivExtern>
-            <form autoComplete="off">
+            <form autoComplete="off" onSubmit={handleSubmit}>
                 <Div>
                     <div>
                         <Text>Olá,</Text>
@@ -17,8 +33,8 @@ const Form = () => {
                     </div>
                     <DivIntern>
                         <TitleForm>Login</TitleForm>
-                        <Input id='usuario' placeholder='Usuário' icon={usu_icon}/>
-                        <Input id='senha' placeholder='Senha' icon={sen_icon} type='password'/>
+                        <Input id='username' placeholder='Usuário' icon={usu_icon} value={form.username} onChange={handleChange}/>
+                        <Input id='password' placeholder='Senha' icon={sen_icon} type='password' value={form.password} onChange={handleChange}/>
                     </DivIntern>
                     <Button/>
                 </Div>
