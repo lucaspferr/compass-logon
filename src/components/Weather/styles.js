@@ -7,6 +7,9 @@ export const WeatherContainer = styled.div`
     flex-wrap: wrap;
     font-family: 'Poppins', sans-serif;
     color: #222222;
+    @media (max-width: 768px) {
+        width: 30vw;
+    }
 `;
 
 export const CityName = styled.h1`
@@ -15,6 +18,10 @@ export const CityName = styled.h1`
     width: 150px;
     margin: 0;
     text-align: center;
+    @media (max-width: 768px) {
+        font-size: 11px;
+        width: 30vw;
+    }
 `;
 
 export const Temperature = styled.h1`
@@ -23,6 +30,9 @@ export const Temperature = styled.h1`
     line-height: 42px;
     margin: 0;
     text-align: center;
+    @media (max-width: 768px) {
+        font-size: 24px;
+    }
 `;
 
 export const IconWeather = styled.img`
@@ -31,5 +41,9 @@ export const IconWeather = styled.img`
     margin: 0;
     margin-right: 10px;
     display: block;
+    @media (max-width: 768px) {
+        width: 35px;
+        height: 35px;
+    }
 
 `;

@@ -13,6 +13,9 @@ export const CounterContainer = styled.div`
     font-family: 'Poppins', sans-serif;
     padding-right: 30px;
     padding-left: 30px;
+    @media (max-width: 768px) {
+        display: none;
+    }
     `;
 
 export const CounterText = styled.h2`

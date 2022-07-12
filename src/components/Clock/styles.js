@@ -5,6 +5,9 @@ export const ClockContainer = styled.div`
     flex-direction: column;
     font-family: 'Poppins', sans-serif;
     color: #222222;
+    @media (max-width: 768px) {
+        display: none;
+    }
     `;
 
 export const ClockTime = styled.h1`

@@ -20,11 +20,7 @@ const HomeFooter = () => {
       </HomeFooterText>
       <Countdown />
       <HomeFooterButtonContainer>
-        <HomeFooterButtonKeep>
-          Continuar
-          <br />
-          Navegando
-        </HomeFooterButtonKeep>
+        <HomeFooterButtonKeep>Continuar Navegando</HomeFooterButtonKeep>
         <HomeFooterButtonLog>Logout</HomeFooterButtonLog>
       </HomeFooterButtonContainer>
     </HomeFooterContainer>

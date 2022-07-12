@@ -27,3 +27,18 @@ export const CompassLogo = styled.img`
         left: calc(50vw - 125px);
     }
 `;
+
+export const HomeImage = styled.img`
+    width: 35vw;
+    height: auto; 
+    margin-top: 7.5vh;
+    background: transparent;
+    object-fit: fill;
+    @media (max-width: 768px) {
+        width: 70vw;
+    }
+    @media (max-width: 400px) {
+        width: 95vw;
+    }
+    
+`;
