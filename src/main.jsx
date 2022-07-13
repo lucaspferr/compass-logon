@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Clock from "./components/Clock/Clock";
 import LogonCompass from "./components/containers/main_content/LogonCompass";
 import Countdown from "./components/Countdown/Countdown";
@@ -13,6 +14,13 @@ import LogonPage from "./pages/Logon/LogonPage";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LogonPage />} />
+        <Route path="home" element={<HomePage />} />
+        <Route />
+      </Routes>
+    </BrowserRouter>
     {/* <LogonCompass/> */}
     {/* <Clock/>
     <Weather/> */}
@@ -20,7 +28,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     {/* <Countdown /> */}
     {/* <HomeFooter /> */}
     {/* <HomeHeader /> */}
-    <HomePage />
+    {/* <HomePage /> */}
     {/* <HomeImageBackground /> */}
   </React.StrictMode>
 );

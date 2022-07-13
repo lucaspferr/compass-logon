@@ -1,16 +1,9 @@
 import React from "react";
+import { CounterContext } from "./CounterContext";
 import { CounterContainer, CounterText, CounterTimer, Seconds } from "./styles";
 
 const Countdown = () => {
-  const [counter, setCounter] = React.useState(600);
-
-  React.useEffect(() => {
-    if (counter === 0) setCounter(600);
-    const interval = setInterval(() => {
-      setCounter(counter - 1);
-    }, 1000);
-    return () => clearInterval(interval);
-  });
+  const newCounter = React.useContext(CounterContext);
 
   return (
     <React.Fragment>
@@ -20,7 +13,7 @@ const Countdown = () => {
           <br />
           refresh in
         </CounterText>
-        <CounterTimer>{counter}</CounterTimer>
+        <CounterTimer>{newCounter.counter}</CounterTimer>
         <Seconds>seconds</Seconds>
       </CounterContainer>
     </React.Fragment>

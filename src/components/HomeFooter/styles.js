@@ -14,7 +14,7 @@ export const HomeFooterContainer = styled.footer`
 export const HomeFooterText = styled.p`
     height: 50px;
     border-right: 2px solid #fff;
-    font-size: 12px;
+    font-size: 1vw;
     font-weight: 400;
     color: white;
     margin: 0;

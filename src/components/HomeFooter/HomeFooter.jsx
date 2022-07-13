@@ -1,5 +1,6 @@
 import React from "react";
 import Countdown from "../Countdown/Countdown";
+import { CounterContext } from "../Countdown/CounterContext";
 import {
   HomeFooterButtonKeep,
   HomeFooterButtonLog,
@@ -9,6 +10,8 @@ import {
 } from "./styles";
 
 const HomeFooter = () => {
+  const counter = React.useContext(CounterContext);
+
   return (
     <HomeFooterContainer>
       <HomeFooterText>
@@ -18,9 +21,16 @@ const HomeFooter = () => {
         Deixe-a aberta em segundo plano e abra uma nova janela para continuar a
         navegar.
       </HomeFooterText>
+      {/* <CounterStorage> */}
       <Countdown />
+      {/* </CounterStorage> */}
       <HomeFooterButtonContainer>
-        <HomeFooterButtonKeep>Continuar Navegando</HomeFooterButtonKeep>
+        <HomeFooterButtonKeep
+          type="button"
+          onClick={() => counter.setCounter(600)}
+        >
+          Continuar Navegando
+        </HomeFooterButtonKeep>
         <HomeFooterButtonLog>Logout</HomeFooterButtonLog>
       </HomeFooterButtonContainer>
     </HomeFooterContainer>

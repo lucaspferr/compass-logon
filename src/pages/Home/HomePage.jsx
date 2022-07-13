@@ -1,4 +1,5 @@
 import React from "react";
+import { CounterStorage } from "../../components/Countdown/CounterContext";
 import HomeBody from "../../components/HomeBody/HomeBody";
 import HomeFooter from "../../components/HomeFooter/HomeFooter";
 import HomeHeader from "../../components/HomeHeader/HomeHeader";
@@ -7,9 +8,11 @@ import HomeImageBackground from "../../components/ImagesAndIcons/HomeImageBackgr
 const HomePage = () => {
   return (
     <React.Fragment>
-      <HomeHeader />
-      <HomeBody />
-      <HomeFooter />
+      <CounterStorage>
+        <HomeHeader />
+        <HomeBody />
+        <HomeFooter />
+      </CounterStorage>
     </React.Fragment>
   );
 };
