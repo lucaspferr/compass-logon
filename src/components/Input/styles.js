@@ -7,7 +7,7 @@ export const ContainerForm = styled.div`
     height: 50px;
     border-radius: 50px;
     background: #26292c;
-    border: 1px solid #ffffff;
+    border: 1px solid ${(props) => props.border};
 `;
 
 export const InputForm = styled.input`

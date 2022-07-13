@@ -1,21 +1,34 @@
 import React from "react";
 import usu_icon from "./images/icon-user.svg";
 import sen_icon from "./images/icon-password.svg";
-import { Div, DivExtern, DivIntern, Text, TitleForm } from "./styles";
+import {
+  Div,
+  DivExtern,
+  DivIntern,
+  InvalidText,
+  InvalidTextContainer,
+  Text,
+  TitleForm,
+} from "./styles";
 import Input from "../Input/Input";
 import Button from "../Button/Button";
 import { useNavigate } from "react-router-dom";
 
 const Form = () => {
   const [form, setForm] = React.useState({ username: "", password: "" });
+  const [borderColor, setBorderColor] = React.useState("#fff");
   const loggedin = useNavigate();
+  let fakeToken = "";
 
   function handleSubmit(event) {
     event.preventDefault();
-    console.log(form.username, form.password);
     if (form.username === "admin" && form.password === "admin") {
-      console.log("Login realizado com sucesso");
+      fakeToken = "fakeToken";
+      localStorage.setItem("token", fakeToken);
+      console.log(localStorage.getItem("token"));
       loggedin("/home");
+    } else {
+      setBorderColor("#E9B425");
     }
   }
 
@@ -44,6 +57,7 @@ const Form = () => {
                 placeholder="Usuário"
                 icon={usu_icon}
                 value={form.username}
+                border={borderColor}
                 onChange={handleChange}
               />
               <Input
@@ -52,8 +66,21 @@ const Form = () => {
                 icon={sen_icon}
                 type="password"
                 value={form.password}
+                border={borderColor}
                 onChange={handleChange}
               />
+              <InvalidTextContainer>
+                {/* Ops, usuário ou senha inválidos.
+                <br />
+                Tente novamente! */}
+                {borderColor === "#E9B425" && (
+                  <InvalidText>
+                    Ops, usuário ou senha inválidos.
+                    <br />
+                    Tente novamente!
+                  </InvalidText>
+                )}
+              </InvalidTextContainer>
             </DivIntern>
             <Button />
           </Div>

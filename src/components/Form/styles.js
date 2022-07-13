@@ -40,7 +40,7 @@ export const Text = styled.div`
 
 export const DivIntern = styled.div`
     display: flex;
-    height: 200px;
+    height: 300px;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-around;
@@ -50,4 +50,16 @@ export const TitleForm = styled.div`
     font-family: 'Poppins', sans-serif;
     font-size: 30px;
     color: #E0E0E0;
+`;
+
+export const InvalidTextContainer = styled.div`
+    height: 20px;
+    color: #E9B425;
+    align-self: center;
+    `;
+export const InvalidText = styled.p`
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
 `;

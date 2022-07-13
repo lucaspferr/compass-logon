@@ -31,7 +31,12 @@ const HomeFooter = () => {
         >
           Continuar Navegando
         </HomeFooterButtonKeep>
-        <HomeFooterButtonLog>Logout</HomeFooterButtonLog>
+        <HomeFooterButtonLog
+          type="button"
+          onClick={() => counter.setCounter(0)}
+        >
+          Logout
+        </HomeFooterButtonLog>
       </HomeFooterButtonContainer>
     </HomeFooterContainer>
   );
